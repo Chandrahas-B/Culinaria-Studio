@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>culinaria.dashboard</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet"><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.1.2/tailwind.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+
+<nav class="main-nav w-full h-16">
+  <div class="container">
+    <div class="flex items-center h-16">
+      <div class="flex items-center w-full">
+        <div class="flex-shrink-0 z-50">
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 242.41 323.21">
+              <path d="M161.6 80.8v80.8H80.8V80.8H0v242.41h80.8v-80.8h80.8v80.8h80.81V80.8H161.6zM80.8 0h80.8v80.8H80.8z" />
+            </svg>
+          </a>
+        </div>
+        <div class="flex ml-auto">
+          <div class="select-wrapper">
+            <div class="select-prepend">
+              <svg aria-hidden="true" class="w-4 h-4" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path fill="currentColor" d="M8 256c0 136.966 111.033 248 248 248s248-111.034 248-248S392.966 8 256 8 8 119.033 8 256zm248 184V72c101.705 0 184 82.311 184 184 0 101.705-82.311 184-184 184z"></path>
+              </svg>
+            </div>
+            <label class="sr-only" for="theme-select">Set Theme</label>
+            <select name="theme" id="theme-select">
+            </select>
+            <div class="select-append">
+              <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-4 h-4">
+                <path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path>
+              </svg>
+            </div>
+          </div>
+          <button class="menu-btn"><svg class="block h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+              <g class="menu">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+              </g>
+              <g class="close-menu">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+              </g>
+            </svg></button>
+          <div class="menu-dropdown">
+            <ul>
+              <li>
+                <a href="javascript:;"> Item 1</a>
+              </li>
+              <li>
+                <a href="javascript:;"> Item 2</a>
+              </li>
+              <li>
+                <a href="javascript:;">Item 3</a>
+              </li>
+              <li>
+                <a href="javascript:;">Item 4</a>
+              </li>
+              <li>
+                <a href="javascript:;">Item 5</a>
+              </li>
+              <li>
+                <a href="javascript:;">Item 6</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+<main>
+  <div class="container">
+    <a href="dash.html"><h1 class="page-title">culinaria.dashboard</h1></a>
+    <div class="card-container p-4 rounded-xl md:p-8">
+      <div class="
+      grid
+      gap-4
+      grid-cols-1
+      sm:grid-cols-2
+      md:gap-8
+      lg:grid-cols-3
+      xl:grid-cols-4
+    ">
+        <div class="group homepage-card relative p-4 w-full rounded-lg">
+          <div class="card-img-wrapper rounded-md"><img src="gpt.png" alt="" />
+            <div class="card-text-wrapper">
+              <a href="javascript:;" class="homepage-card-link">GPT-3</a>
+              <p class="homepage-card-text">
+                Speak to GPT-3. Get new suggestions.
+              </p>
+            </div>
+          </div>
+
+        </div>
+        <div class="group homepage-card relative p-4 w-full rounded-lg">
+          <div class="card-img-wrapper rounded-md"><img src="surprise.png" alt="" />
+            <div class="card-text-wrapper">
+              <a href="javascript:;" class="homepage-card-link">Surprise me!</a>
+              <p class="homepage-card-text">
+                Get a cool random dish to treat yourself today!
+              </p>
+            </div>
+          </div>
+
+        </div>
+        
+        <div class="group homepage-card relative p-4 w-full rounded-lg">
+          <div class="card-img-wrapper rounded-md"><img src="salad.png" alt="" />
+            <div class="card-text-wrapper">
+              <a href="javascript:;" class="homepage-card-link">Salad</a>
+              <p class="homepage-card-text">
+                Definition of the word healthy. Have some salad!
+              </p>
+            </div>
+          </div>
+
+        </div>
+        
+        <div class="group homepage-card relative p-4 w-full rounded-lg">
+          <div class="card-img-wrapper rounded-md"><img src="spaghetti.png" alt="" />
+            <div class="card-text-wrapper">
+              <a href="javascript:;" class="homepage-card-link">Spgahetti aglio e olio
+              </a>
+              <p class="homepage-card-text">
+                Spaghetti cooked in olive oil and burnt garlic.
+              </p>
+            </div>
+          </div>
+
+        </div>
+        <div class="group homepage-card relative p-4 w-full rounded-lg">
+          <div class="card-img-wrapper rounded-md"><img src="oats.png" alt="" />
+            <div class="card-text-wrapper"><a href="javascript:;" class="homepage-card-link">Oats</a>
+              <p class="homepage-card-text">
+                A fresh bowl of steaming hot oats!
+              </p>
+            </div>
+          </div>
+
+        </div>
+        
+        <div class="group homepage-card relative p-4 w-full rounded-lg">
+          <div class="card-img-wrapper rounded-md"><img src="roti.png" alt="" />
+            <div class="card-text-wrapper"><a href="javascript:;" class="homepage-card-link">Roti</a>
+              <p class="homepage-card-text">
+               Rotis with a gravy of your choice.
+              </p>
+            </div>
+          </div>
+        </div>
+         <div class="group homepage-card relative p-4 w-full rounded-lg">
+          <div class="card-img-wrapper rounded-md"><img src="pancake.png" alt="" />
+            <div class="card-text-wrapper"><a href="javascript:;" class="homepage-card-link">Pancake</a>
+              <p class="homepage-card-text">
+               Wheat pancakes with honey. Order directly from Zomato!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="group homepage-card relative p-4 w-full rounded-lg">
+          <div class="card-img-wrapper rounded-md"><img src="pizza.png" alt="" />
+            <div class="card-text-wrapper"><a href="javascript:;" class="homepage-card-link">Pizza</a>
+              <p class="homepage-card-text">
+               Can pizza be healthy? Why don't you find out with GPT-3's recipe.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div>
+    </div>
+  </div>
+</main>
+
+
+</footer>
+  <script  src="./script.js"></script>
+</body>
+</html>

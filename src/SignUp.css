@@ -1,0 +1,117 @@
+
+body{
+  background: rgb(34, 45, 195);
+  background: #2D4263;
+  font-family: "work sans";
+}
+
+html{
+  font-size: 100%;
+}
+
+#loginform{
+  max-width: 400px;
+  min-width: 300px;
+  /* max-height: 597px; */
+  width: 30%;
+  /* height: 60%; */
+  margin: 100px auto;
+  font-size: 12px;
+  background-color: #243d5e;
+  border-radius: 25px;
+  box-shadow: inset 5px 5px 5px 5px rgba(34,193,195,0.7);
+}
+
+#headerTitle{
+  text-align: center;
+  font-family: 'open sans', sans-serif;
+  padding: 2rem 0;
+  margin: 0;
+  font-size: 2rem;
+}
+
+.row{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2rem;
+  max-width: 100%;
+  color:whitesmoke;
+}
+
+.row input{
+  background:transparent;
+  width: 80%;
+  box-sizing: border-box;
+  border-radius: 10px;
+  font-size: 1.3rem;
+  padding-left: 1.5rem;
+  padding-bottom: 1rem;
+  box-shadow: inset 0px -3px 5px 0px rgba(13, 149, 228, 0.979);
+  transition: box-shadow 1s ease-in;
+  color:whitesmoke;
+  border:none;
+}
+
+.row input:focus{
+   box-shadow: inset 0px -3px 0px 0px rgba(34,193,195,0.7);
+   outline: none;
+}
+
+.row input::-webkit-input-placeholder{
+  opacity: 1;
+  transition: opacity 1s ease-out;
+}
+
+.row input:hover::-webkit-input-placeholder,
+.row input:focus::-webkit-input-placeholder{
+  opacity: 0;
+  border:1 px solid white;
+}
+
+.row label{
+  align-self: start;
+  padding-left: 2.5rem;
+  padding-bottom: 0.5rem;
+  color: whitesmoke;
+  font-size:18px;
+}
+
+.rowbutton{
+  border-radius: 25px;
+  width: 80%;
+  height: 40px;
+  font-size: 1.3rem;
+  color: white;
+  font-weight: 700;
+  background: rgb(34,193,195);
+  background: linear-gradient(90deg, rgba(34,193,195,1) 0%,     rgb(170, 45, 253) 100%);
+  border: 0px;
+  cursor: pointer;
+  transition: opacity 0.25s ease-out;
+}
+
+.row button:hover{
+  opacity: 0.8;
+}
+
+#button{
+  padding-bottom: 1.5rem;
+}
+
+
+#iconGroup{
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+#iconGroup a{
+  margin: 0 0.6rem;
+}
+
+#alternativeLogin {
+   text-align: center;
+   padding-top: 2rem;
+   margin-top: 1.5rem;
+}

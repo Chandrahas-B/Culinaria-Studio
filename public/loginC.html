@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <title>AccessCulinaria</title>
+    <style>
+        * {
+            direction: ltr;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #2D4263;
+            box-shadow: 10px 10px 22px rgba(0, 0, 0, 0.2),
+            -10px -10px 22px rgb(18, 192, 205);
+            transition: box-shadow 1s ease-in;
+            font-family: Arial;
+        }
+        .Container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            margin-top: -8px;
+            min-height: 100vh;
+            flex-wrap: wrap;
+        }
+        .Wrap-Login {
+            width: 400px;
+            overflow: hidden;
+            border-radius: 30px;
+            background: #2D4263;
+            box-shadow: 10px 10px 22px rgba(0, 0, 0, 0.2),
+            -10px -10px 22px rgb(18, 192, 205);
+            transition: box-shadow 1s ease-in;
+            padding: 30px;
+        }
+        form h2 {
+            text-align: center;
+            color: whitesmoke;
+            font-weight:700;
+            padding-bottom: 45px;
+            font-family: "Apple SD Gothic Neo";
+        }
+        form {
+            width: 100%;
+        }
+        .Wrap-Input {
+            width: 100%;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .Wrap-Input i {
+            color: #a3a3a3;
+            right: 88%;
+            font-size: 20px;
+            position: absolute;
+            top: 35px;
+            padding: 10px 10px;
+        }
+        .fa-eye {
+            left: 86%;
+        }
+        .Pass-Input {
+            margin-bottom: 35px;
+        }
+        .Input:focus::placeholder {
+            transition: all 0.3s;
+            color: transparent;
+        }
+        .Input-Label {
+            margin-left: 20px;
+            font-size: 14px;
+        }
+        form .Input {
+            transition: all 0.6s;
+            margin-top: 10px;
+        }
+        form .Input {
+            color: whitesmoke;
+            padding: 0 7px 0 43px;
+            font-family: Arial;
+            font-size: 16px;
+            height: 50px;
+            display: block;
+            width: 100%;
+            outline: none;
+            border: none;
+            background: transparent;
+            border-radius: 20px;
+            box-shadow: inset 5px 5px 11px rgba(0, 0, 0, 0.2),
+            inset -5px -5px 11px rgb(18, 192, 205);
+        }
+        ::placeholder {
+            color: #a3a3a3;
+            opacity: 1; /* Firefox */
+        }
+        :-ms-input-placeholder {
+            /* Internet Explorer 10-11 */
+            color: #a3a3a3;
+        }
+        ::-ms-input-placeholder {
+            /* Microsoft Edge */
+            color: #a3a3a3;
+        }
+        .error {
+            color: #d00c16;
+            background-color: #FFBABA;
+        }
+        .button{
+  border-radius: 25px;
+  width: 80%;
+  height: 40px;
+  font-size: 1.3rem;
+  color: white;
+  font-weight: 700;
+  background: rgb(34,193,195);
+  background: linear-gradient(0deg, rgba(34,193,195,1) 0%,     rgb(170, 45, 253) 100%);
+  border: 0px;
+  cursor: pointer;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin-left:30px;
+}
+        .button:active {
+            box-shadow: inset 5px 5px 11px rgba(0, 0, 0, 0.2),
+            inset -5px -5px 11px rgba(192, 97, 97, 0.75);
+        }
+        .button:hover{
+            cursor: pointer;}
+    hr{color:lightseagreen; opacity:60%;}
+    img:hover{
+        cursor: pointer;}
+    label{
+        color:white;
+        font-weight:bolder;
+        font-size:15px;
+        opacity:0.8;
+        }
+    </style>
+</head>
+<body>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<div class="Container">
+    <div class="Wrap-Login">
+         <form action="./dash.html" method="GET" id="login_form"  onsubmit="return ( funu() && funp() )"> 
+            <h2 class="Login-Text">Sign in to culinaria.studio</h2>
+            <div class="Wrap-Input">
+                <i class="fas fa-user icon"></i>
+                <label>Username or Email</label>
+                <input type="text" placeholder="Enter Your Username" onchange="return funu()" class="Input user" id="username" required >
+                <br><p><span class="error" id="erroru"></span></p>
+                 <script>
+                
+                    function funu() {
+                        const u = document.getElementById("username").value;
+                        const form = document.getElementById("login_form");
+                        const a = /[!@#$%^&*()+=;:.,>'"/?<{}]/;
+                        const op = a.exec(u);
+                        if (u == "abcd") {
+                            
+                            document.getElementById("erroru").style.padding="2px";
+                            document.getElementById("errorp").style.opacity="1";
+                            document.getElementById("erroru").innerHTML="Username does not exist.";
+                            return false;
+                        }
+                        else if (op) {
+                            document.getElementById("erroru").style.border="2px dotted darkred";
+                            document.getElementById("erroru").style.padding="2px";
+                            document.getElementById("erroru").innerHTML="Invalid Username! ";
+                            return false;
+                        }
+                        else{
+                            document.getElementById("login_form").action="./dash.html";
+                            document.getElementById("erroru").style.innerHTML="<></>";
+                            document.getElementById("erroru").style.opacity="0";
+                            return true;
+                        }
+                    }
+                </script>
+            </div>
+            <div class="Wrap-Input Pass-Input">
+                <i class="fas fa-lock icon"></i>
+                <label>Password</label>
+                <input type="password" placeholder="Enter Your Password" onchange="return funp()" class="Input user" id="password" required>
+                <br><div class="error" id="errorp"></div>
+                <script>
+                    function funp() {
+                        const p = document.getElementById("password").value;
+                        const form = document.getElementById("login_form");
+                        if (p.length < 8 ) {
+                            document.getElementById("errorp").style.border="2px dotted darkred";
+                            document.getElementById("errorp").style.padding="2px";
+                            document.getElementById("errorp").innerHTML="Invalid username or password";
+                            return false;
+                        }
+                        else{
+                            document.getElementById("login_form").action="./dash.html";
+                            document.getElementById("errorp").style.innerHTML="<></>";
+                            document.getElementById("errorp").style.opacity="0";
+                            return true;
+                        }
+                    }
+                </script>
+            </div>
+            <div class="btn">
+                <input type="submit" id="submit" class="button" value="Login" ><br/>
+                <center><a href="index.html"><u style="color:white; opacity:0.6">Don't have an account?</a></u></center>
+
+            </div>
+        </form>
+
+        <center style="margin-top:5%;color:lightcyan;"><b><hr><br/>OR</b>
+        <br><br>
+        <form action="dash.html" method="GET" onsubmit="return fun()">
+            <div class="g-signin2" data-onsuccess="onSignIn" ></div>
+            <meta name="google-signin-client_id" content="289272266859-c02qcjrtcf91uv700c83s87pnummrnm9.apps.googleusercontent.com">
+
+            </form>
+    </center>
+    </div>
+</div>
+
+
+</body>
+</html>
