@@ -53,17 +53,18 @@ let rpass=document.getElementById("pwd2").value;
 
 if(usn==="abcd" ){
   document.getElementById("erroru").style="color:red";
-  document.getElementById("erroru").innerHTML="<br/>Username not available."
+  setTimeout(()=>{ document.getElementById("erroru").innerHTML="<br/>Username not available.";},600);
   document.getElementById("sub-btn").disabled="disabled";
 }
-else if(usn.length ==0){
+else if(usn.length ==0 || usn.match(/[!@#$%^&*()-+={|'`~";:.,<>/?}+ ]/)){
   document.getElementById("erroru").style="color:red";
-  document.getElementById("erroru").innerHTML="<br/>Invalid username."
+  setTimeout(()=>{document.getElementById("erroru").innerHTML="<br/>Invalid username.";},500);
   document.getElementById("sub-btn").disabled="disabled";
 }
 else{
   document.getElementById("erroru").style="color:lightgreen";
-  document.getElementById("erroru").innerHTML="Nice Username!";
+  document.getElementById("erroru").innerHTML="";
+  setTimeout(()=>{document.getElementById("erroru").innerHTML="Nice Username!<br/>Hello "+usn;},800);
   document.getElementById("sub-btn").disabled=false;
 }
 
