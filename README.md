@@ -1,1 +1,3 @@
-# miniproject
+# Culinaria.Studio
+
+Food recommender System
